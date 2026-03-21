@@ -1,13 +1,13 @@
 class Solution {
     public int solution(int a, int b) {
+        int answer = 0;
         
-        String add1 = String.valueOf(a) + String.valueOf(b);
-        String add2 = String.valueOf(b) + String.valueOf(a);
+        int add1 = Integer.parseInt("" + a + b);
+        int add2 = Integer.parseInt("" + b + a);
         
-        int result1 = Integer.parseInt(add1);
-        int result2 = Integer.parseInt(add2);
+        answer = add1 >= add2 ? add1 : add2;
         
-        return result1 >= result2 ? result1 : result2;
+        return answer;
         
     }
 }
