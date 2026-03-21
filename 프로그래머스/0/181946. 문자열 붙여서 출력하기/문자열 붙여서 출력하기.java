@@ -6,11 +6,6 @@ public class Solution {
         String a = sc.next();
         String b = sc.next();
         
-        for (char str1 : a.toCharArray()) {
-            System.out.print(str1);
-        }
-        for (char str2 : b.toCharArray()) {
-            System.out.print(str2);
-        }
+        System.out.println(a + b);
     }
 }
