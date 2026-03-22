@@ -3,14 +3,14 @@ class Solution {
         int answer = 0;
         
         int multi = 1;
-        int add = 0;
+        int sum = 0;
         
-        for (int i = 0; i < num_list.length; i++) {
-            add += num_list[i];
-            multi *= num_list[i];
+        for (int i : num_list) {
+            sum += i;
+            multi *= i;
         }
         
-        answer = multi < Math.pow(add, 2) ? 1 : 0;
+        answer = multi < Math.pow(sum, 2) ? 1 : 0;
         
         return answer;
     }
