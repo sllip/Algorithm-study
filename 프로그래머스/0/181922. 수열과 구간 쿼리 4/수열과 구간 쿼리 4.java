@@ -14,9 +14,7 @@ class Solution {
             }
         }
         
-        for (int j = 0; j < arr.length; j++) {
-            answer[j] = arr[j];
-        }
+        answer = arr;
         
         return answer;
     }
