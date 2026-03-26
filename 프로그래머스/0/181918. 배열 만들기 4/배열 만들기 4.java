@@ -10,7 +10,7 @@ class Solution {
             if (stk.size() == 0) {
                 stk.add(arr[i]);
                 i += 1;
-            } else if ((stk.size() != 0) && (stk.get(stk.size() - 1) < arr[i])) {
+            } else if (stk.get(stk.size() - 1) < arr[i]) {
                 stk.add(arr[i]);
                 i += 1;
             } else {
