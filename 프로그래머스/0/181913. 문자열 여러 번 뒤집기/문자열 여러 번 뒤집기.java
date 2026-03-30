@@ -6,17 +6,13 @@ class Solution {
             int s = queries[i][0];
             int e = queries[i][1];
             
-            for (int j = 0; j < s; j++) {
-                result += my_string.charAt(j);
-            }
+            result += my_string.substring(0, s);
             
             for (int k = e; k >= s; k--) {
                 result += my_string.charAt(k);
             }
             
-            for (int l = e+1; l < my_string.length(); l++) {
-                result += my_string.charAt(l);
-            }
+            result += my_string.substring(e+1, my_string.length());
             
             my_string = result;
             result = "";
