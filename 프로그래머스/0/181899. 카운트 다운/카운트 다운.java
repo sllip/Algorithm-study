@@ -4,9 +4,8 @@ class Solution {
         
         int[] answer = new int[n];
         
-        for (int j = 0; j < n; j++) {
-            answer[j] = start_num;
-            start_num--;
+        for (int i = 0; i < n; i++) {
+            answer[i] = start_num - i;
         }
         
         return answer;
