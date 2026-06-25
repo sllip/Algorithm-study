@@ -21,8 +21,7 @@ class Solution {
         }
         
         if (start == -1) {
-            answer = new int[1];
-            answer[0] = -1;
+            answer = new int[]{-1};
         } else {
             answer = Arrays.copyOfRange(arr, start, end+1);
         }
