@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 class Solution {
     public int[] solution(int[] arr) {
-        int[] answer = new int[arr.length];
+        int[] answer = {};
         
         int start = -1;
         int end = -1;
