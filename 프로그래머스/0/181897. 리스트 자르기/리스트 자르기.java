@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int n, int[] slicer, int[] num_list) {
-        int[] answer = new int[num_list.length];
+        int[] answer = {};
         
         int a = slicer[0];
         int b = slicer[1];
