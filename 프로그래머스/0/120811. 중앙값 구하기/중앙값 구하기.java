@@ -2,12 +2,8 @@ import java.util.Arrays;
 
 class Solution {
     public int solution(int[] array) {
-        int answer = 0;
-        
-        int idx = array.length / 2;
         Arrays.sort(array);
-        
-        answer = array[idx];
+        int answer = array[array.length / 2];
         
         return answer;
     }
