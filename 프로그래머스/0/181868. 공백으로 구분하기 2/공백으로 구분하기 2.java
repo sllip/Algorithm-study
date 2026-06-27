@@ -2,18 +2,15 @@ import java.util.Arrays;
 
 class Solution {
     public String[] solution(String my_string) {
-        String[] answer = new String[my_string.length()];
-        String[] str = my_string.split(" ");
-        
-        int idx = 0, count = 0;
-        for (int i = 0; i < str.length; i++) {
-            if (!str[i].equals("")) {
-                answer[idx++] = str[i];
-                count++;
-            }
+        while (my_string.contains("  ")) {
+            my_string = my_string.replace("  ", " ");
         }
         
-        answer = Arrays.copyOf(answer, count);
+        if (my_string.startsWith(" ")) {
+            my_string = my_string.substring(1, my_string.length());
+        }
+        
+        String[] answer = my_string.split(" ");
         
         return answer;
     }
