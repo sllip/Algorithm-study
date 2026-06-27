@@ -5,9 +5,9 @@ class Solution {
         String[] answer = new String[strArr.length];
         
         int idx = 0, count = 0;
-        for (int i = 0; i < strArr.length; i++) {
-            if (!strArr[i].contains("ad")) {
-                answer[idx++] = strArr[i];
+        for (String s : strArr) {
+            if (!s.contains("ad")) {
+                answer[idx++] = s;
                 count++;
             }
         }
