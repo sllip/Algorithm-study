@@ -1,8 +1,8 @@
 class Solution {
     public int[] solution(int[] arr) {
         int length = 0;
-        for (int i = 0; i < arr.length; i++) {
-            length += arr[i];
+        for (int n : arr) {
+            length += n;
         }
         
         int[] answer = new int[length];
