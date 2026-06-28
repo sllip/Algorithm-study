@@ -5,14 +5,14 @@ class Solution {
         ArrayList<Integer> stk = new ArrayList<>();
         
         for (int i = 0; i < arr.length; i++) {
-            if (stk.size() == 0 || stk.get(stk.size()-1) != arr[i]) {
+            if (stk.isEmpty() || stk.get(stk.size()-1) != arr[i]) {
                 stk.add(arr[i]);
             } else {
                 stk.remove(stk.size()-1);
             }
         }
         
-        if (stk.size() == 0) {
+        if (stk.isEmpty()) {
             stk.add(-1);
         }
         
