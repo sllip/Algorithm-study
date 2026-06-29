@@ -8,7 +8,7 @@ class Solution {
         }
         
         for (int i = 0; i < str_len.length; i++) {
-            answer = str_len[i] > answer ? str_len[i] : answer;
+            answer = Math.max(answer, str_len[i]);
         }
         
         return answer;
