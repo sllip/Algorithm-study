@@ -6,7 +6,9 @@ class Solution {
         boolean flag = false;
         
         for (int i = 0; i < targets.length; i++) {
+            
             for (int j = 0; j < targets[i].length(); j++) {
+                
                 for (int k = 0; k < keymap.length; k++) {
                     idx = keymap[k].indexOf(String.valueOf(targets[i].charAt(j)));
                     if (idx == -1) {
@@ -26,6 +28,7 @@ class Solution {
                     flag = false;
                     break;
                 }
+                
                 click += (min+1);
                 min = 100;
             }
