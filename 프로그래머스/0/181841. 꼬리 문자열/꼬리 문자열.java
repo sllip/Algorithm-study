@@ -3,10 +3,9 @@ class Solution {
         String answer = "";
         
         for (String s : str_list) {
-            if (s.contains(ex)) {
-                continue;
+            if (!s.contains(ex)) {
+                answer += s;
             }
-            answer += s;
         }
         
         return answer;
