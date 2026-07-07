@@ -5,10 +5,8 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         
-        String star = "*";
-        
         for (int i = 1; i <= n; i++) {
-            System.out.print(star.repeat(i) + "\n");
+            System.out.println("*".repeat(i));
         }
     }
 }
