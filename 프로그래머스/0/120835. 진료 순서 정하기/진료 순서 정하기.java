@@ -12,10 +12,8 @@ class Solution {
         
         Arrays.sort(emergency);
         
-        int idx = 1;
         for (int i = len-1; i >= 0; i--) {
-            answer[map.get(emergency[i])] = idx;
-            idx++;
+            answer[map.get(emergency[i])] = len - i;
         }
         
         return answer;
