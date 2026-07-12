@@ -1,15 +1,16 @@
+import java.util.HashMap;
+
 class Solution {
     public String solution(String rsp) {
         String answer = "";
+        HashMap<String, String> map = new HashMap<>(rsp.length());
         
-        for (int i = 0; i < rsp.length(); i++) {
-            if (String.valueOf(rsp.charAt(i)).equals("0")) {
-                answer += '5';
-            } else if (String.valueOf(rsp.charAt(i)).equals("2")) {
-                answer += '0';
-            } else {
-                answer += '2';
-            }
+        map.put("0", "5");
+        map.put("2", "0");
+        map.put("5", "2");
+        
+        for (String r : rsp.split("")) {
+            answer += map.get(r);
         }
         
         return answer;
