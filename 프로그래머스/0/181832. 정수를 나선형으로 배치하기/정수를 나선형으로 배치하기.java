@@ -13,8 +13,6 @@ class Solution {
                 answer[i][e] = num++;
             }
             
-            if (s == e) break;
-            
             for (int j = e-1; j >= s; j--) {
                 answer[e][j] = num++;
             }
