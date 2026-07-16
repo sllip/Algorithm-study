@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 class Solution {
     public int solution(int[] nums) {
-        int answer = 0;
         ArrayList<Integer> arr = new ArrayList<>();
         
         for (int n : nums) {
@@ -10,9 +9,7 @@ class Solution {
                 arr.add(n);
             }
         }
-        
-        answer = (arr.size() > nums.length / 2) ? nums.length / 2 : arr.size();
-        
-        return answer;
+
+        return Math.min(nums.length/2, arr.size());
     }
 }
