@@ -12,7 +12,7 @@ class Solution {
         int idx = 0;
         for (int i = 0; i < photo.length; i++) {
             for (int j = 0; j < photo[i].length; j++) {
-                answer[idx] += map.get(photo[i][j]) == null ? 0 : map.get(photo[i][j]);
+                answer[idx] += map.getOrDefault(photo[i][j], 0);
             }
             idx++;
         }
