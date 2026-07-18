@@ -1,18 +1,17 @@
-import java.util.HashSet;
+import java.util.ArrayList;
 
 class Solution {
     public int solution(String[] s1, String[] s2) {
         int answer = 0;
-        HashSet<String> set = new HashSet<>(s1.length);
+        ArrayList<String> arr = new ArrayList<>();
         
         for (String s : s1) {
-            set.add(s);
+            arr.add(s);
         }
         
         for (String s : s2) {
-            if (set.contains(s)) answer++;
+            if (arr.contains(s)) answer++;
         }
-        
         
         return answer;
     }
