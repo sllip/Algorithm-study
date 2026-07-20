@@ -4,13 +4,11 @@ class Solution {
         int a = 0, b = 0;
         
         for (String p : polynomial.split(" \\+ ")) {
-            if (!p.endsWith("x")) {
+            if (p.contains("x")) {
+                a += p.equals("x") ? 1 : Integer.parseInt(p.replace("x",""));
+            } else {
                 b += Integer.parseInt(p);
-                p = p.replace(p, "0x");
             }
-            
-            String str = p.substring(0, p.indexOf("x"));
-            a += str.equals("") ? 1 : Integer.parseInt(str);
         }
         
         if (a == 0) answer = ""+b;
