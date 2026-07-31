@@ -7,11 +7,10 @@ class Solution {
         
         for (int n : d) {
             budget -= n;
+            
+            if (budget < 0) break;
+            
             answer++;
-            if (budget < 0) {
-                answer--;
-                break;
-            }
         }
         
         return answer;
