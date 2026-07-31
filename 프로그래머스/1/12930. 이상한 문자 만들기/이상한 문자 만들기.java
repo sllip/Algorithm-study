@@ -7,8 +7,7 @@ class Solution {
         while (answer.length() != len) {
             String str = String.valueOf(s.charAt(idx));
             
-            if (idx%2 == 0) answer += str.toUpperCase();
-            else answer += str.toLowerCase();
+            answer += idx%2 == 0 ? str.toUpperCase() : str.toLowerCase();
             
             if (s.charAt(idx) == ' ') {
                 s = s.substring(idx+1, s.length());
