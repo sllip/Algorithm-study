@@ -1,17 +1,15 @@
 class Solution {
     public int solution(int n) {
         int answer = 0;
-        String str = "";
+        String s = "";
         
         while (n != 0) {
-            str += n%3;
+            s += n%3;
             n /= 3;
         }
         
-        int i = str.length()-1;
-        for (String s : str.split("")) {
-            answer += Integer.parseInt(s)*Math.pow(3, i);
-            i--;
+        for (int i = 0; i < s.length(); i++) {
+            answer += (s.charAt(i)-'0') * Math.pow(3, s.length()-1-i);
         }
         
         return answer;
