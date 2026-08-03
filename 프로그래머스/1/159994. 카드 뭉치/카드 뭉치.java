@@ -1,24 +1,14 @@
 class Solution {
     public String solution(String[] cards1, String[] cards2, String[] goal) {
-        String str = String.join(" ", goal) + " ";
-        int j = 0, k = 0;
+        String answer = "Yes";
+        int idx1 = 0, idx2 = 0;
         
         for (int i = 0; i < goal.length; i++) {
-            while (j < cards1.length) {
-                if (str.indexOf(cards1[j]) == 0) {
-                    str = str.substring(cards1[j].length()+1);
-                    j++;
-                } else break;
-            }
-            
-             while (k < cards2.length) {
-                if (str.indexOf(cards2[k]) == 0) {
-                    str = str.substring(cards2[k].length()+1);
-                    k++;
-                } else break;
-            }
+            if (idx1 < cards1.length && cards1[idx1].equals(goal[i])) idx1++;
+            else if (idx2 < cards2.length && cards2[idx2].equals(goal[i])) idx2++;
+            else answer = "No";
         }
         
-        return str.length() == 0 ? "Yes" : "No";
+        return answer;
     }
 }
