@@ -7,11 +7,11 @@ class Solution {
             boolean flag = true;
             
             for (String w : words) {
-                if (b != b.replace(w+w, w)) flag = false;
+                if (b.contains(w+w)) flag = false;
             }
 
             if (flag == false) continue;
-            if (b.replaceAll("(aya|ye|woo|ma)", "").length() == 0) answer++;
+            if (b.replaceAll("aya|ye|woo|ma", "").length() == 0) answer++;
         }
         
         return answer;
