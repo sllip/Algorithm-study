@@ -15,9 +15,7 @@ class Solution {
             for (n = 0; n < list.size(); n++) {
                 if (s.charAt(i) == list.get(n)) break;
             }
-            
-            n = n+index >= list.size() ? (n+index)%list.size() : n+index;
-            answer += list.get(n);
+            answer += list.get((n+index) % list.size());
         }
         
         return answer;
