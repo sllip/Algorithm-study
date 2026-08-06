@@ -10,11 +10,6 @@ class Solution {
         int p = stages[0];
         double cnt = 0;
         
-        if (p > N) {
-            for (int i = 0; i < N; i++) answer[i] = i+1;
-            return answer;
-        }
-        
         for (int i = 0; i < stages.length; i++) {
             if (p == stages[i]) cnt++;
             if (p < stages[i] || i == stages.length-1) {
