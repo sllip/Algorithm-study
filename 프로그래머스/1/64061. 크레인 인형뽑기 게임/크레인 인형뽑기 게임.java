@@ -5,22 +5,22 @@ class Solution {
         int answer = 0;
         Stack<Integer> stack = new Stack<>();
         
-        for (int i = 0; i < moves.length; i++) {
+        for (int m : moves) {
             int idx = 0;
             
-            while (idx < board.length && board[idx][moves[i]-1] == 0) idx++;
+            while (idx < board.length && board[idx][m-1] == 0) idx++;
             if (idx == board.length) continue;
             
-            if (stack.isEmpty()) stack.push(board[idx][moves[i]-1]);
-            else if (stack.peek() == board[idx][moves[i]-1]) {
+            if (stack.isEmpty()) stack.push(board[idx][m-1]);
+            else if (stack.peek() == board[idx][m-1]) {
                 stack.pop();
-                answer++;
+                answer += 2;
             }
-            else stack.push(board[idx][moves[i]-1]);
+            else stack.push(board[idx][m-1]);
             
-            board[idx][moves[i]-1] = 0;
+            board[idx][m-1] = 0;
         }
         
-        return answer*2;
+        return answer;
     }
 }
