@@ -16,12 +16,10 @@ class Solution {
                 int dr = Math.abs(r-n);
                 
                 if (dl%3 == 0) dl /= 3;
-                else if (dl == 5) dl = 3;
-                else if (dl > 2) dl /= 2;
+                else if (dl > 2) dl = (dl == 5) ? 3 : dl/2;
                 
                 if (dr%3 == 0) dr /= 3;
-                else if (dr == 5) dr = 3;
-                else if (dr > 2) dr /= 2;
+                else if (dr > 2) dr = (dr == 5) ? 3 : dr/2;
                 
                 if (dl < dr || (dl == dr && hand.equals("left"))) {
                     answer += "L";
