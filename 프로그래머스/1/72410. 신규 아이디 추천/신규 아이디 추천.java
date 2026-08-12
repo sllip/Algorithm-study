@@ -1,8 +1,9 @@
 class Solution {
     public String solution(String new_id) {
         String answer = "";
-        new_id = new_id.toLowerCase();
-        new_id = new_id.replaceAll("[~!@#$%^&*()=+\\[\\]{}:?,<>/]", "").replaceAll("[.]+", ".");
+        new_id = new_id.toLowerCase()
+            .replaceAll("[~!@#$%^&*()=+\\[\\]{}:?,<>/]", "")
+            .replaceAll("[.]+", ".");
         
         for (int i = 0; i < new_id.length(); i++) {
             if ((i == 0 || i == new_id.length()-1) && new_id.charAt(i) == '.') continue;
